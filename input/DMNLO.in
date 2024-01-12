@@ -1,0 +1,101 @@
+# Input card for DM@NLO.
+
+# This input card defines the process and computational parameters. The
+# MSSM scenario is defined in a separate file in the SLHA file format.
+
+# Center-of-mass momentum in GeV
+pcm = 100
+
+# Incoming and outgoing particles are denoted using the PDG numbering scheme.
+# The particles are listed in the table below. A minus in front of the PDG number
+# means charge conjugation. 
+
+# ┌─────────────────────┬───────────────────┬───────────────────┐
+# │ d       =      1    │ u       =      2  │                   |
+# │ s       =      3    │ c       =      4  │                   │
+# │ b       =      5    │ t       =      6  │                   │
+# ┌─────────────────────┬───────────────────┬───────────────────┐
+# │ e-      =      11   │ nu_eL   =      12 │                   │
+# │ mu-     =      13   │ nu_muL  =      14 │                   │
+# │ tau-    =      15   │ nu_tau  =      16 │                   │
+# ┌─────────────────────┬───────────────────┬───────────────────┐
+# │ g      =      21    │ h       =      25 |                   |
+# │ A      =      22    │ H       =      35 |                   |
+# │ Z      =      23    │ H3      =      36 |                   |       
+# │ W      =      24    │ H+      =      37 |                   | 
+# ├─────────────────────┼───────────────────┼───────────────────┤
+# │ ~e_L-     = 1000011 │ ~e_R-   = 2000011 │ ~nu_eL  = 1000012 │
+# │ ~mu_L-    = 1000013 │ ~mu_R-  = 2000013 │ ~nu_muL = 1000014 │
+# │ ~tau_1-   = 1000015 │ ~tau_2- = 2000015 │ ~nu_tau = 1000016 │
+# ├─────────────────────┼───────────────────┼───────────────────┤
+# │ ~chi_10   = 1000022 │ ~chi_20 = 1000023 │ ~chi_30 = 1000025 │
+# │ ~chi_40   = 1000035 │ ~chi_1+ = 1000024 │ ~chi_2+ = 1000037 │
+# ├─────────────────────┼───────────────────┼───────────────────┤
+# │ ~u_L      = 1000002 │ ~u_R    = 2000002 │ ~d_L    = 1000001 │
+# │ ~d_R      = 2000001 │ ~c_L    = 1000004 │ ~c_R    = 2000004 │
+# │ ~s_L      = 1000003 │ ~s_R    = 2000003 │ ~t_1    = 1000006 │
+# │ ~t_2      = 2000006 │ ~b_L    = 1000005 │ ~b_R    = 2000005 │
+# ├─────────────────────┼───────────────────┴───────────────────┤
+# │ ~g        = 1000021 │                                       │
+# └─────────────────────┴───────────────────────────────────────┘
+#
+# Incoming particles
+particleA = 1000022
+particleB = 1000006
+
+# Outgoing particles
+particle1 = 6
+particle2 = 21
+
+# Scalar nuclear form factors for direct detection
+#
+# - formfactor = 0 : DM@NLO values (from M. Hoferichter, J. Ruiz de Elvira, B. Kubis and U.-G. Meißner, Phys. Rev. Lett. 115 (2015) 092301, [1506.04142])
+#
+# - formfactor = 1 : DarkSUSY 6.4 values 
+#
+# - formfactor = 2 : MicrOMEGAs 5.3 values 
+formfactor = 0
+
+# The parameter 'renscheme' defines the renormalization scheme. Three schemes are included: 
+#
+# - renscheme = 0 :  DRbar scheme: mb,mt,MSf,theta,Af defined in DRbar
+#
+# - renscheme = 1 :  Mixed DR-OS Scheme No.1: mb,Ab,At are defined in DRbar. 
+#                                             mt,mst1,msb1,msb2 are defined on-shell. 
+#                                             theta, mst2 are dependant quantities.
+#
+# - renscheme = 2 :  Mixed DR-OS Scheme No.2: mt,mb,Ab,At are defined in DRbar.
+#                                             mst1,msb1,msb2 are defined on-shell. 
+#                                             theta, mst2 are dependant quantities.
+renscheme = 1
+
+
+# The parameter 'choosesol' defines which solution for the mixing matrices should be taken. Three options are included: 
+#
+# - choosesol = 0 : DM@NLO chooses the solution automatically. This option may lead to discontinuities showing up in SUSY parameter variations.
+#
+# - choosesol = 1 : use the first solution
+#
+# - choosesol = 2 : use the second solution
+choosesol = 0
+
+# The parameter 'result' defines the computation to be performed. Two computations are supported:
+#
+# - result = s:     Outputs the total cross section.
+#
+# - result = sv:    Outputs the total cross section times velocity
+result = sv
+
+# SLHA input file that defines the SUSY benchmark point.
+slha = input/Scenario.spc
+
+# Renormalization scale in GeV
+muR = 1784.638
+
+
+
+
+
+
+
+

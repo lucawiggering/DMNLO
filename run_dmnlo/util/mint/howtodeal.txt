@@ -1,0 +1,42 @@
+------------------------------------------------------------------
+---------------------------Using MINT-----------------------------
+------------------------------------------------------------------
+in the mint folder should be the following files:
+	- cernroutines.f (used stuff)
+	- integrator.f (main integrator)
+	- newunit. f (used studd)
+	- pwhg_rnd.h (used stuff)
+	- random.f (generates random numbers)
+You has to define for MINT:
+	double precision xgrid(0:50,4), xint, xacc(0:50,4), ymax(50,4), ymaxrat(50,4) , ans, err
+	integer nhits(0:50,4), ifold(4)
+	external mint
+
+End of course the function you want to integrate (in our case external stsT2QQbar_Integrand4Mint)
+
+The first step is to calculate a suitable grid
+
+	call regridplotopen('grid.top') (writes the grid data in grid.top)
+	call initxgrid(xgrid,4) (initialieses the first grid)
+	call mint(stsT2QQbar_Integrand4Mint,4,500000,5,ifold,0,0,xgrid,xint,xacc,nhits,ymax,ymaxrat,ans,err)     (does the integration)
+		-> stsT2QQbar_Integrand4Mint: function you want to intergate
+		-> 4: number of dimensions
+		-> 500000: calls per interation
+		-> 5: Number of iterations (5 is suitable-shouldn't be to large!)
+		-> ifold:  	set ifold = 1 at the beginning, lateron it is overwriten by the integration
+		-> 0: imode, as long as imode is 0 the grid is improved, setting imode to 1 for last calculation
+		-> xgrid: reads in and puts out the grid
+		-> xint: output of integral when imode = 0, input when imode = 1
+		-> xacc: total accumulated value
+		-> nhits: distribution of number of hits
+		-> ymax:upper bound
+		-> ymaxrat:???
+		-> ans: gives the result
+		-> err: gives the error
+	call regridplotclose (end of generating grid)
+
+the grid is saved to "grid.top"
+use "./td -d EPS grid.top" to make the plot of the grid
+(td -> TopDrawer see https://cp3.irmp.ucl.ac.be/projects/madgraph/wiki/TopDrawer)
+"evince grid.eps" to take a look on the grid
+

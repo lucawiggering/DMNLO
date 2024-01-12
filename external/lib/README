@@ -1,0 +1,6 @@
+---- Modifications of SLHALib ---
+Compared to the original release of SLHALib-2.2, the print statement in SLHARead.F for unknown blocks in lines 98 and 99 has been commented out.
+
+---- Modifications of LoopTools ---
+Compared to the original release of LoopTools_2.16, the greeting message in ffinit.F in lines 55 - 63 as well as the summary of errors and warnings in ffinit.F in line 559 have been commented out.
+

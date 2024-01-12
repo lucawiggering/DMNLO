@@ -1,0 +1,59 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore makefiles
+!makefile
+
+# Unignore all dirs
+!*/
+
+# Ignore all compiled libraries
+*.a
+*.o
+*.so
+*.dylib
+
+# Ignore all auxillary Mac files
+.DS_Store
+
+# Ignore SPheno generated files
+SPheno**/bin/*
+!SPheno**/bin/.gitkeep
+SPheno**/include/*
+!SPheno**/include/.gitkeep
+SPheno**/lib/*
+!SPheno**/lib/.gitkeep
+
+# Ignore MicrOmegas generated user specific files
+micrOmegas**/MSSM/lib/*_path.h
+micrOmegas**/MSSM/lib/suspect.exe
+#
+micrOmegas**/MSSM_ScaleVar/lib/*_path.h
+micrOmegas**/MSSM_ScaleVar/lib/suspect.exe
+#
+micrOmegas**/MSSM/work/autoprot.h
+micrOmegas**/MSSM/work/path.c
+micrOmegas**/MSSM/work/VandP.c
+#
+micrOmegas**/MSSM_ScaleVar/work/autoprot.h
+micrOmegas**/MSSM_ScaleVar/work/path.c
+micrOmegas**/MSSM_ScaleVar/work/VandP.c
+#
+micrOmegas**/CalcHEP_src/FlagsForMake
+micrOmegas**/CalcHEP_src/FlagsForSh
+micrOmegas**/CalcHEP_src/c_source/num/include/rootDir.h
+micrOmegas**/CalcHEP_src/bin/calc
+micrOmegas**/CalcHEP_src/bin/Int
+micrOmegas**/CalcHEP_src/bin/make_VandP
+micrOmegas**/CalcHEP_src/bin/mkLibshared
+micrOmegas**/CalcHEP_src/bin/mkLibstat
+micrOmegas**/CalcHEP_src/bin/plot_view
+micrOmegas**/CalcHEP_src/bin/s_calchep
+micrOmegas**/CalcHEP_src/bin/show_distr
+micrOmegas**/CalcHEP_src/bin/sum_distr
+
+# Ignore the compile script (rename runall.py to compile.py to make changes)
+compile.py

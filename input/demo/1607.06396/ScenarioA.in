@@ -1,0 +1,54 @@
+Block MODSEL                 # Select model
+ 1    0                        # Low energy MSSM
+Block SMINPUTS               # Standard Model inputs
+ 1   1.27908953E+02       # alpha_em^(-1)(MZ) SM MSbar
+ 2   1.16637000E-05       # G_Fermi 
+ 3   1.17200000E-01       # alpha_s(MZ) SM MSbar
+ 4   9.11884000E+01       # M_Z (pole)
+ 5   4.23000000E+00       # mb(mb) SM MSbar
+ 6   1.73300000E+02       # mtop(pole)
+ 7   1.77700000E+00       #  Mtau     
+Block EXTPAR
+ 1   7.31000000E+02      # MG1
+ 2   7.66000000E+02      # MG2
+ 3   1.90630000E+03      # MG3
+ 23  1.28630000E+03      # mu
+ 25  1.34000000E+01      # tanb
+ 26  1.59290000E+03      # MA
+BLOCK MSQ2IN 
+ 1 1 1.05794068E+07      # Mq1^2
+ 2 2 1.05794068E+07      # Mq2^2
+ 3 3 2.67093649E+06      # Mq3^2
+BLOCK MSU2IN 
+ 1 1 1.05794068E+07      # Mu1^2
+ 2 2 1.05794068E+07      # Mu2^2
+ 3 3 1.11175936E+06      # Mu3^2
+BLOCK MSD2IN 
+ 1 1 1.05794068E+07      # Md1^2
+ 2 2 1.05794068E+07      # Md2^2
+ 3 3 2.67093649E+06      # Md3^2
+BLOCK MSL2IN 
+ 1 1 1.28852282E+07      # Ml1^2
+ 2 2 1.28852282E+07      # Ml2^2
+ 3 3 1.28852282E+07      # Ml3^2
+BLOCK MSE2IN 
+ 1 1 1.28852282E+07      # Mr1^2
+ 2 2 1.28852282E+07      # Mr2^2
+ 3 3 1.28852282E+07      # Mr3^2
+BLOCK TUIN 
+ 1 1 1.00000000E-10      # TU11, T=sqrt2*m*A/vev=Y*A
+ 2 2 1.00000000E-10      # TU22
+ 3 3 -2.79230000E+03      # TU33
+BLOCK TDIN 
+ 1 1 1.00000000E-10      # TD11
+ 2 2 1.00000000E-10      # TD22
+ 3 3 1.00000000E-10      # TD33
+BLOCK TEIN 
+ 1 1 1.00000000E-10      # TE11
+ 2 2 1.00000000E-10      # TE22
+ 3 3 1.00000000E-10      # TE33
+BLOCK SPHENOINPUT 
+ 1      1      # Error level
+ 2      1      # SPA Convention
+11      1      # Branching ratios
+21      0      # Cross-section
